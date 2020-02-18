@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Coda+Caption:800&display=swap" rel="stylesheet" />
+    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Assignment 2</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+        #navbar {
+            font-weight: 800;
+        }
+        
+        .fr li {
+            float: right;
+        }
+        
+        @media (min-width: 1000px) {
+            .wrap {
+                position: relative;
+            }
+            .wrap img+.content {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            .content {
+                padding: 100px 0px 0px 80px;
+            }
+            .sec-4 div[class*='col-']:last-child {
+                margin-top: 104px;
+            }
+            .sec-4 div[class*='col-']:first-child {
+                margin-top: 78px;
+            }
+            section,
+            footer {
+                padding-top: 7.4em;
+                padding-bottom: 7.4em;
+            }
+            .sec-5-content {
+                padding-top: 10%;
+                padding-left: 35%;
+            }
+            .ico-lg {
+                font-size: 5.5em;
+            }
+            .pad {
+                padding-inline-end: 100px;
+            }
+            .pad1 {
+                padding-right: 30px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .content {
+                padding: 100px 0px 0px 80px;
+            }
+            section,
+            footer {
+                padding: 5.5em 0;
+            }
+            .ico-lg {
+                font-size: 4em;
+            }
+            .pad {
+                padding-inline-end: 20px;
+            }
+            .pad1 {
+                padding-right: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 100px 0px 0px 80px;
+            }
+            section,
+            footer {
+                padding: 5.57142857em 0;
+            }
+            .ico-lg {
+                font-size: 3em;
+            }
+            .pad {
+                padding-inline-end: 20px;
+            }
+            .pad1 {
+                padding-right: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .content {
+                padding: 10px 0px 0px 5px;
+            }
+            .sec-4 img {
+                margin: 23px 0px;
+            }
+            section,
+            footer {
+                padding: 5.57142857em 0;
+            }
+            .ico-lg {
+                font-size: 2.5em;
+            }
+            .pad {
+                padding-inline-end: 20px;
+            }
+            .bg--dark div[class*='foot-row']:first-child {
+                display: grid;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .bg--dark div[class*='foot-row']:last-child {
+                text-align-last: center;
+                padding-bottom: 10px;
+            }
+            .bg--dark div[class*='foot']:first-child {
+                text-align-last: center;
+            }
+            .pad1 {
+                padding-right: 25px;
+            }
+        }
+        
+        .sec-2 {
+            display: flex;
+            padding: 2.78571429em;
+            border: 1px solid #ececec;
+            border-radius: 5px;
+        }
+        
+        *,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        .p,
+        .ul,
+        .a {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box- {
+            padding: 15px 15px;
+        }
+        
+        .box-content {
+            padding-left: 30px;
+        }
+        
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: 'Rubik', 'Helvetica', sans-serif;
+        }
+        
+        .label {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            color: #fff;
+            text-transform: uppercase;
+            height: 26px;
+            min-width: 65px;
+            padding: 0 10px;
+            text-align: center;
+            border-radius: 50px;
+            position: absolute;
+            z-index: 3;
+            top: 1.5em;
+            right: 1.5em;
+            background: #31639c;
+        }
+        
+        *,
+        p {
+            font-size: 14px;
+        }
+        
+        .wrap {
+            position: relative;
+        }
+        
+        .wrap img+.content {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        
+        .wrap img+.sec-5-content {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+        }
+        
+        .sec-4 {
+            background: #fafafa;
+        }
+        
+        .navbar {
+            flex-flow: row wrap;
+        }
+        
+        .bg--dark {
+            background: #252525;
+        }
+        
+        .f {
+            color: lightslategrey;
+            font-size: large;
+        }
+        
+        .row {
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- first section -->
+    <!-- <div class="container-fluid" style="background-color:  rgb(248, 248, 248);"> -->
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color:  rgb(248, 248, 248);">
+        <!-- <div style="background-color: #e6e6ff;"> -->
+        <a class="nav-brand;" style="
+        font-family: 'Coda Caption', sans-serif;">STACK</a>
+        <ul class="navbar-right fr " style="list-style: none;">
+            <li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </li>
+                    
+                    <li class="mr-3 d-md-none"><a href="#" id="shopping-cart"><i class="fa fa-shopping-cart" style="color: black;margin-right: 30px;font-size: 30px;"></i><span class="badge"></span></a>
+                    </li>
+                    </ul>
+                  </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey;font-family:'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i>HOME
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey;font-family: 'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i> PAGES</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey;font-family: 'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i> BLOG
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey ;font-family:'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i> SHOP</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey ;font-family: 'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i>PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey ;font-family:'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i> BLOCKS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: grey ;font-family:'Cinzel', serif; font-size: small;">
+                                <i class="dropdown-item"></i> ELEMENTS</a>
+                        </li>
+                        <li>
+                            <button type="button" class=" button1 btn btn-outline-secondary" style="width:140px;margin:10px;padding: 8px 12px 8px 12px; font-size: small;">
+                  TRY STACK
+                </button>
+                        </li>
+                        <li>
+                            <button type="button" class=" button2 btn btn-primary" style="background-color: #4d94ff;
+                        width: 130px;
+                        height: 36px;
+                        font-size: small;
+                        border-radius: 5px;
+						margin:10px">
+                  $39 BUY NOW
+                </button>
+                        </li>
+                    </ul>
+                </div>
+    </nav>
+
+    <!--end of first section-->
+
+    <!--second section-->
+
+    <div class="wrap">
+        <img src="./img/p3.jpg" style="width:100%;" />
+        <div class="content">
+            <h1>
+                Streamline your workflow with Stack
+            </h1>
+            <p>
+                Build lean, beautiful websites with a clean and contemporary look to suit a range of purposes
+            </p>
+            <button type="button" class=" button2 btn btn-primary" style="background-color: #4d94ff; width: 130px; height: 36px; padding: 8px 12px 8px 12px;font-size: small; border-radius: 2px;  margin:10px;border-radius: 5px;">
+                        Try Stack
+                    </button> <br>&nbsp;&nbsp;or
+            <a href="#">view the demos</a>
+        </div>
+    </div>
+
+
+    <!--second section-->
+
+
+    <!-- Third Section -->
+
+    <section style="margin-top: 5%; border-bottom: 1px solid #ebebeb;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 box-">
+                    <div class="sec-2">
+                        <i class="fa fa-life-ring ico-lg"></i>
+                        <div class="box-content">
+                            <h5>Highly Customizable</h5>
+                            <p>
+                                Stack's visual style is simple yet distinct. Perfect for your next project whether it be a basic marketing site, or multi-page company presence.
+                            </p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 box-">
+                    <div class="sec-2">
+                        <i class="fa fa-life-ring ico-lg"></i>
+                        <div class="box-content">
+                            <h5>Built For Startups</h5>
+                            <p>
+                                Launching an attractive website quickly and affordably is important for modern startups — Stack offers massive value with high-end styling.
+                            </p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 box-">
+                    <div class="sec-2">
+                        <span class="label">FREE</span>
+                        <i class="fa fa-life-ring ico-lg"></i>
+                        <div class="box-content">
+                            <h5>Page Builder Included</h5>
+                            <p>
+                                Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase.
+                            </p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 box-">
+                    <div class="sec-2">
+                        <i class="fa fa-life-ring ico-lg" aria-hidden="true"></i>
+                        <div class="box-content">
+                            <h5>Friendly Support</h5>
+                            <p>
+                                You'll love the comfort that comes with six-months free support. Our dedicated support forum makes support hassle-free and efficient.
+                            </p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section -->
+
+
+    <!-- Fourth Section -->
+
+    <div>
+        <section class="sec-4">
+            <div class="container">
+                <div class="row justify-content-around ">
+                    <div class="col-md-4 col-lg-3">
+                        <h3 style="margin-bottom: 1.04em;">Experience quality</h3>
+                        <p class="lead">
+                            Stack is built with customization and ease-of-use at its core &mdash; whether you're a seasoned developer or just starting out, you'll be making attractive sites faster than any traditional HTML template.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <img alt="Image" src="./img/p4.jpg" style="max-width: 100%; vertical-align: middle; border-style: none; box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);" />
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <p>
+                            Each purchase of Stack includes six months of free support, including access to our dedicated support forum. In addition to support you'll recieve lifetime updates, including new content and bug-fixes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fourth Section -->
+    <!-- fifth section -->
+    <div class=" container-fluid wrap">
+        <img alt="background" src="./img/p6.jpg" style="width:100%; height:100%;opacity: 80%;">
+        <div class="row sec-5-content">
+            <div class="col-md-12" style="text-align: center;">
+                <span class="h1 text-white" style="font-size: 20px;">Customers love Stack's robust and modern design</span>
+                <p class=" text-white">
+                    Multiple font and colour scheme options mean that dramatically altering the look of your site is just clicks away.
+                </p>
+                <div>
+                    <i class="fa fa-play-circle-o text-white" style="font-size: 2.5em; padding-right: 10px;"></i>
+                    <span class="text-white">
+                            <strong>See Stack in action</strong>&nbsp;&nbsp;&nbsp;104 Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- fifth section -->
+
+
+    <!-- sixth section -->
+    <div class="container text-center" style="padding:40px">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>A trusted partner to the best</h2>
+                <p>
+                    Working with the industries best and brightest minds to deliver outstanding results
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row" style="display: flex;">
+            <div class="col-md-12">
+                <i class="fa fa-life-ring ico-lg pad"> </i>
+                <i class="fa fa-life-ring ico-lg pad"> </i>
+                <i class="fa fa-life-ring ico-lg pad"> </i>
+                <i class="fa fa-life-ring ico-lg"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="justify-content: center;">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+
+                            <div class="row flex-fill text-center" style="justify-content: space-between; padding:30px;">
+
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="./img/p1.png" class="rounded-circle" style="height: 84px;width:84px; background-color: lightslategrey;" />
+                                    </div>
+                                    <div class="col-md-10" style="font-family: Mitr, sans-serif;">
+                                        <h3>"Communication,design and responsiveness mean this developer is a top pick for my sites!"</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row flex-fill " style="justify-content: space-between; padding:30px;">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="./img/p1.png" class="rounded-circle" style="height: 84px;width:84px; background-color: lightslategrey;" />
+                                    </div>
+                                    <div class="col-md-10" style="font-family: Mitr, sans-serif;">
+                                        <h3>"Communication,design and responsiveness mean this developer is a top pick for my sites!"</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row flex-fill " style="justify-content: content; padding:30px; ">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="./img/p1.png" class="rounded-circle" style="height: 84px;width:84px; background-color: lightslategrey;" />
+                                    </div>
+                                    <div class="col-md-10" style="font-family: Mitr, sans-serif;">
+                                        <h3>"Communication,design and responsiveness mean this developer is a top pick for my sites!"</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sixth section -->
+
+
+    <!-- seventh-section -->
+    <section class="text-center text-white " style="background-color: #6600ff; ">
+        <div class="container">
+            <div class="row" style="justify-content: center;">
+                <div class="col-md-12 col-lg-6">
+                    <div>
+                        <h2>Purchase Stack now and get lifetime free content updates</h2>
+                        <p class="lead">
+                            Each purchase of Stack comes with six months free support and a lifetime of free content and bug-fix updates.
+                        </p>
+                        <button type="button" class=" button2 btn btn-primary text-uppercase" style="background-color: #4d94ff;
+                        font-size: x-small;
+                        height: 40px;
+                
+                        border-radius: 5px;
+						margin:15px;">
+                                Purchase on Envato
+                        </button>
+                        </span>
+                        <!-- <span class="label">$18 USD</span> -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- seventh-section -->
+
+
+    <!-- eighth section -->
+
+
+    <footer class=" bg--dark " style="justify-content: center;">
+        <div class="container">
+            <div class="row" style="display: flex;">
+                <div class="col-md-8 col-sm-8 foot-row">
+                    <a href="#" class="pad1">
+                        <span class="h6 text-uppercase text-white">About</span>
+                    </a>
+                    <a href="#" class="pad1">
+                        <span class="h6 text-uppercase text-white">Careers</span>
+                    </a>
+                    <a href="#" class="pad1">
+                        <span class="h6 text-uppercase text-white">Support</span>
+                    </a>
+                    <a href="#">
+                        <span class="h6 text-uppercase text-white">Work with us</span>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4 foot-row text-right">
+                    <a href="#">
+                        <i class="fa fa-facebook f pad1 text-white"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-twitter f pad1 text-white"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-instagram f pad1 text-white"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-google-plus f text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <!--end of row-->
+            <div class="row" style="display:flex;">
+                <div class="col-md-8 col-sm-8 foot">
+                    <span class="pad1">&copy;<a href="#" class="text-white">Stack Inc.</a></span>
+                    <a href="#" class="pad1 text-white">Privacy Policy</a>
+                    <a href="#" class="text-white">Legal</a>
+                </div>
+                <div class="col-md-4 col-sm-4 text-right foot-row">
+                    <a href="#" class="text-white">support@stack.io</a>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </footer>
+
+    <!-- eighth section -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
